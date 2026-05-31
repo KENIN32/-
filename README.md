@@ -12,7 +12,7 @@
 | 3 | **Простейшие задачи** | [Overleaf](https://www.overleaf.com/project/6a14c05a43d897dc8eceb00a) | [lab3.pdf](docs/lab3.pdf) | Простейшие задачи, интегралы |
 | 4 | **Граф переходов + SAT** | [Overleaf (статья)](https://www.overleaf.com/project/6a14d10b401c9f488183aa82) | [lab2.pdf](docs/lab2.pdf) | Построение графа переходов последовательностной схемы |
 | 5 | **Презентация — История Физмат ОГУ** | [Overleaf (Beamer)](https://www.overleaf.com/project/6a14e986401c9f48818ec1ba) | [lab1.pdf](docs/lab1.pdf) | Презентация: 1931 г. — наши дни |
-| 6 | **Визуализация данных** | Tableau | [Book1.twb](tableau/Book1.twb) | Открыть в Tableau Desktop |
+| 6 | **Визуализация данных** | Tableau | [Book1.twb](tableau/Lab6.twb) | Открыть в Tableau Desktop |
 
 ---
 
