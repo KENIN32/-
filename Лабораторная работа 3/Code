@@ -1,0 +1,113 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{left=4cm, right=4cm, top=4cm, bottom=4cm}
+
+\begin{document}
+\pagestyle{empty}
+
+\noindent\makebox[0pt][l]{§ 1]}\hfill ПРОСТЕЙШИЕ ЗАДАЧИ \hfill \makebox[0pt][r]{47}
+\vspace{0.6cm}
+
+Функция $v(x,t)$, очевидно, удовлетворяет однородному уравнению
+\setcounter{equation}{76}
+\begin{equation}
+    \rho\frac{\partial^{2}v}{\partial t^{2}}=\frac{\partial}{\partial x}\left(k\frac{\partial v}{\partial x}\right)
+\end{equation}
+и однородным дополнительным условиям
+\begin{equation}
+    \left.
+    \begin{aligned}
+    v(x,0)&=0, \quad v(0,t)=0, \\
+    v_{t}(x,0)&=0, \quad v(l,t)=0
+    \end{aligned}
+    \right\}
+\end{equation}
+а также условию 1) теоремы. 
+
+Докажем, что функция $v(x,t)$ тождественно равна нулю.
+
+Рассмотрим функцию
+\begin{equation}
+    E(t)=\frac{1}{2}\int_{0}^{l}\left\{k(v_{x})^{2}+\rho(v_{t})^{2}\right\}dx
+\end{equation}
+и покажем, что она не зависит от $t$. Физический смысл функции $E(t)$ очевиден: это полная энергия струны в момент времени $t$. Продифференцируем $E(t)$ по $t$, выполняя при этом дифференцирование под знаком интеграла\footnote{) Для дифференцирования под знаком интеграла достаточно, чтобы получаемое при этом подынтегральное выражение было непрерывно на отрезке $0 \le x \le l$ при $t \ge 0$. Это требование в нашем случае выполнено, так как функция $v(x,t)$ удовлетворяет условию 1) теоремы, а $\rho(x)$ и $k(x)$ --- условию 2).})
+\begin{equation*}
+    \frac{dE(t)}{dt}=\int_{0}^{l}(kv_{x}v_{xt}+\rho v_{t}v_{tt})dx.
+\end{equation*}
+
+\noindentИнтегрируя по частям первое слагаемое правой части, будем иметь:
+\begin{equation}
+    \int_{0}^{l}kv_{x}v_{xt}dx=[kv_{x}v_{t}]_{0}^{l}-\int_{0}^{l}v_{t}(kv_{x})_{x}dx.
+\end{equation}
+
+\noindentПодстановка обращается в нуль в силу граничных условий (из $v(0,t)=0$ следует $v_{t}(0,t)=0$ и аналогично для $x=l$). Отсюда следует, что
+\begin{equation*}
+    \frac{dE(t)}{dt}=\int_{0}^{l}[\rho v_{t}v_{tt}-v_{t}(kv_{x})_{x}]dx=\int_{0}^{l}v_{t}[\rho v_{tt}-(kv_{x})_{x}]dx=0,
+\end{equation*}
+т. е. $E(t) = \text{const}$. Учитывая начальные условия, получаем:
+\begin{equation}
+    E(t) = \text{const} = E(0) = \frac{1}{2}\int_{0}^{l}[k(v_{x})^{2}+\rho(v_{t})^{2}]_{t=0}dx=0,
+\end{equation}
+
+\newpage
+
+\noindent\makebox[0pt][l]{48}\hfill УРАВНЕНИЯ ГИПЕРБОЛИЧЕСКОГО ТИПА \hfill\makebox[0pt][r]{[ГЛ. II}
+\vspace{0.6cm}
+
+\noindent так как 
+\begin{equation*}
+    v(x,0)=0, \quad v_{t}(x,0)=0.
+\end{equation*}
+
+\noindentПользуясь формулой (81) и положительностью $k$ и $\rho$, заключаем, что
+\begin{equation*}
+    v_{x}(x,t)\equiv 0, \quad v_{t}(x,t)\equiv 0,
+\end{equation*}
+откуда и следует тождество
+\begin{equation}
+    v(x,t)=\text{const}=C_{0}.
+\end{equation}
+Пользуясь начальным условием, находим:
+\begin{equation*}
+    v(x,0)=C_{0}=0;
+\end{equation*}
+тем самым доказано, что
+\begin{equation}
+    v(x,t)\equiv 0.
+\end{equation}
+Следовательно, если существуют две функции $u_{1}(x,t)$ и $u_{2}(x,t)$, удовлетворяющие всем условиям теоремы, то $u_{1}(x,t)\equiv u_{2}(x,t)$.
+
+Для второй краевой задачи функция $v=u_{1}-u_{2}$ удовлетворяет граничным условиям
+\begin{equation}
+    v_{x}(0,t)=0, \quad v_{x}(l,t)=0,
+\end{equation}
+и подстановка в формуле (80) также обращается в нуль. Дальнейшая часть доказательства теоремы остается без изменений.
+
+Для третьей краевой задачи доказательство требует некоторого видоизменения. Рассматривая по-прежнему два решения $u_{1}$ и $u_{2}$, получаем для их разности $v(x,t)=u_{1}-u_{2}$ уравнение (77) и граничные условия
+\begin{equation}
+    \left.
+    \begin{aligned}
+    v_{x}(0,t)-h_{1}v(0,t)&=0 \quad (h_{1}\ge 0), \\
+    v_{x}(l,t)+h_{2}v(l,t)&=0 \quad (h_{2}\ge 0).
+    \end{aligned}
+    \right\}
+\end{equation}
+Представим подстановку в (80) в виде
+\begin{equation*}
+    [kv_{x}v_{t}]_{0}^{l}=-\frac{k}{2}\frac{\partial}{\partial t}[h_{2}v^{2}(l,t)+h_{1}v^{2}(0,t)].
+\end{equation*}
+Интегрируя $\frac{dE}{dt}$ в пределах от нуля до $t$, получим:
+\begin{equation*}
+    E(t)-E(0)=\int_{0}^{t}\int_{0}^{l}v_{t}[\rho v_{tt}-(kv_{x})_{x}]dx\,dt -\frac{k}{2}\{h_{2}[v^{2}(l,t)-v^{2}(l,0)]+h_{1}[v^{2}(0,t)-v^{2}(0,0)]\},
+\end{equation*}
+откуда в силу уравнения и начальных условий следует:
+\begin{equation}
+    E(t)=-\frac{k}{2}[h_{2}v^{2}(l,t)+h_{1}v^{2}(0,t)]\le 0.
+\end{equation}
+
+\end{document}
